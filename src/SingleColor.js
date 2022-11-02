@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-import rgbToHex from "./util";
+// This is function is used for convering colors to Hex..
+// But i didn't use here, cause i used my Hex property on value.js
+
+// import rgbToHex from "./util";
 
 const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const [alert, setAlert] = useState(false);
 
   // Used for turning array to string seperated comma.
   const bcg = rgb.join(",");
-  console.log(bcg);
   return (
-    <article className={`color`} style={{ backgroundColor: `rgb(${bcg})` }}>
+    <article
+      className={`color ${index > 10 && "color-light"}`}
+      style={{ backgroundColor: `rgb(${bcg})` }}
+    >
       <p className="percent-value"> {weight} %</p>
+      <p className="color-value">{hexColor}</p>
     </article>
   );
 };
