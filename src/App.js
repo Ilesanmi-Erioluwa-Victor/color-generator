@@ -14,7 +14,19 @@ function App() {
   return (
     <>
       <section className="container">
-        <h2>Hello WOrld...</h2>
+        <h3>Color Generator</h3>
+
+        <form onSubmit={HandleSubmit}>
+          <input
+            type={"text"}
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+            placeholder="Enter your Color"
+          />
+          <button className="btn" type="submit">
+            Generate
+          </button>
+        </form>
       </section>
 
       <section className="colors">
