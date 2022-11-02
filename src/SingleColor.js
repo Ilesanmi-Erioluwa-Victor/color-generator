@@ -14,7 +14,7 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
   useEffect(() => {
     let ClearModal = setTimeout(() => {
       setAlert(false);
-    }, 3000);
+    }, 1000);
 
     return () => clearInterval(ClearModal);
   }, [alert]);
