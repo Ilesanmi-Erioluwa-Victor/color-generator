@@ -9,7 +9,14 @@ function App() {
 
   const HandleSubmit = (e) => {
     e.preventDefault();
-    console.log("Hello world....");
+
+    try {
+      let colors = new Values(color).all(10);
+      setColor(colors);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   };
   return (
     <>
@@ -21,7 +28,8 @@ function App() {
             type={"text"}
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            placeholder="Enter your Color"
+            placeholder="#ffffff"
+            className={`${error ? "error" : null}`}
           />
           <button className="btn" type="submit">
             Generate
