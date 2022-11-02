@@ -9,13 +9,14 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
 
   // Used for turning array to string seperated comma.
   const bcg = rgb.join(",");
+  const HexcolorHash = `#${hexColor}`;
   return (
     <article
       className={`color ${index > 10 && "color-light"}`}
       style={{ backgroundColor: `rgb(${bcg})` }}
     >
       <p className="percent-value"> {weight} %</p>
-      <p className="color-value">{hexColor}</p>
+      <p className="color-value">{HexcolorHash}</p>
     </article>
   );
 };
