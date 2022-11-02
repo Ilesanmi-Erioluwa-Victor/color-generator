@@ -210,6 +210,8 @@ input.error {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 0.1rem;
+  border-radius: 2px;
 }
 
 .color {
