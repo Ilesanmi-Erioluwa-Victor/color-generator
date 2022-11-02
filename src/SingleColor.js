@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import rgbToHex from "./util";
 
-const SingleColor = ({ rgb, weight, index }) => {
+const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const [alert, setAlert] = useState(false);
 
   // Used for turning array to string seperated comma.
@@ -9,7 +9,7 @@ const SingleColor = ({ rgb, weight, index }) => {
   console.log(bcg);
   return (
     <article className={`color`} style={{ backgroundColor: `rgb(${bcg})` }}>
-      SingleColor
+      <p className="percent-value"> {weight} %</p>
     </article>
   );
 };
